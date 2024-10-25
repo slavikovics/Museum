@@ -8,16 +8,19 @@ namespace MuseumNamespace
 		_address = address;
 		_statusController = MuseumStatusController();
 		_visitorsController = VisitorsController(_statusController);
+		_employeesController = EmployeesController(_statusController);
 	}
 
 	void Museum::Open()
 	{
-		_statusController.ChangeStatus(Opened);
+		_statusController.ChangeStatus(MuseumStatuses::Opened);
 	}
 
 	void Museum::Close()
 	{
-		_statusController.ChangeStatus(Closed);
+		if (_visitorsController.GetVisitorsCount() != 0) return;
+		if (_employeesController.GetEmployeesCount() != 0) return;
+		_statusController.ChangeStatus(MuseumStatuses::Closed);
 	}
 }
 
