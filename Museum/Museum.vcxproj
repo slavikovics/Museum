@@ -127,12 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="IPerson.h" />
     <ClInclude Include="Museum.h" />
-    <ClInclude Include="MuseumNamespace.h" />
+    <ClInclude Include="MuseumStatusController.h" />
+    <ClInclude Include="MuseumStatus.h" />
+    <ClInclude Include="MuseumStatusClosed.h" />
+    <ClInclude Include="MuseumStatuses.h" />
+    <ClInclude Include="MuseumStatusOpened.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Museum.cpp" />
+    <ClCompile Include="MuseumStatus.cpp" />
+    <ClCompile Include="MuseumStatusClosed.cpp" />
+    <ClCompile Include="MuseumStatusController.cpp" />
+    <ClCompile Include="MuseumStatusOpened.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

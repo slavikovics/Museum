@@ -1,4 +1,3 @@
-#include "MuseumNamespace.h"
 #include "Museum.h"
 
 namespace MuseumNamespace
@@ -8,6 +7,11 @@ namespace MuseumNamespace
 		_name = name;
 		_address = address;
 		_numberOfEmployees = numberOfEmployees;
+	}
+
+	void Museum::Open()
+	{
+
 	}
 }
 

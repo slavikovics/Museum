@@ -1,12 +1,12 @@
 #include <string>
-#include "MuseumNamespace.h"
+#include "MuseumStatuses.h"
 
 namespace MuseumNamespace
 {
 	class Employee
 	{
 
-	private:
+	  private:
 
 		int _id;
 
@@ -14,9 +14,9 @@ namespace MuseumNamespace
 
 		std::string _role;
 
-	public:
+	  public:
 
-		virtual void Action()
+		virtual void DoJob()
 		{
 
 		}
