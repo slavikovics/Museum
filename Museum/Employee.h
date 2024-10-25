@@ -7,7 +7,7 @@
 
 namespace MuseumNamespace
 {
-	class Employee : protected IPerson
+	class Employee : public IPerson
 	{
 	  protected:
 
@@ -21,5 +21,8 @@ namespace MuseumNamespace
 
 		Employee(std::string name, int id, bool isEnabled);
 
+		void Fire();
+
+		int GetId();
 	};
 }

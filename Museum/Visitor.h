@@ -4,7 +4,7 @@
 
 namespace MuseumNamespace
 {
-	class Visitor : protected IPerson
+	class Visitor : public IPerson
 	{
 	  private:
 
@@ -23,6 +23,8 @@ namespace MuseumNamespace
 		  void EnterMuseum();
 
 		  void ExitMuseum();
+
+		  int GetId();
 	  
 	};
 }

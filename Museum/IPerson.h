@@ -12,5 +12,6 @@ namespace MuseumNamespace
 		int _id;
 
 		bool _isEnabled;
+
 	};
 }
