@@ -7,11 +7,17 @@ namespace MuseumNamespace
 		_name = name;
 		_address = address;
 		_numberOfEmployees = numberOfEmployees;
+		_statusController = MuseumStatusController();
 	}
 
 	void Museum::Open()
 	{
+		_statusController.ChangeStatus(Opened);
+	}
 
+	void Museum::Close()
+	{
+		_statusController.ChangeStatus(Closed);
 	}
 }
 

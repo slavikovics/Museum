@@ -1,5 +1,6 @@
 #include <string>
 #include "MuseumStatuses.h"
+#include "Jobs.h"
 
 namespace MuseumNamespace
 {
@@ -12,20 +13,21 @@ namespace MuseumNamespace
 
 		bool _isEnabled;
 
-		std::string _role;
+		Jobs _job;
 
 	  public:
 
 		virtual void DoJob()
 		{
-
+			_isEnabled = true;
+			_job = NoJob;
 		}
 
-		Employee(int id, bool isEnabled, std::string role)
+		Employee(int id, bool isEnabled)
 		{
 			_id = id;
 			_isEnabled = isEnabled;
-			_role = role;
+			_job = NoJob;
 		}
 	};
 }
