@@ -1,5 +1,8 @@
 #pragma once
 #include "MuseumStatusController.h"
+#include <list>
+#include "Visitor.h"
+#include "Employee.h"
 
 namespace MuseumNamespace
 {
@@ -13,15 +16,20 @@ namespace MuseumNamespace
 
 		MuseumStatusController _statusController;
 
-		int _numberOfEmployees;
+		std::list<Visitor> _visitors;
 
 	  public:
 
-		Museum(std::string name, std::string address, int numberOfEmployees);
+		Museum(std::string name, std::string address);
 
 		void Open();
 
 		void Close();
+
+		std::list<Visitor> GetVisitors()
+		{
+			return _visitors;
+		}
 	};
 }
 

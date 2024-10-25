@@ -3,28 +3,23 @@
 #include "MuseumStatuses.h"
 #include "Jobs.h"
 #include "IPerson.h"
+#include <list>
 
 namespace MuseumNamespace
 {
 	class Employee : protected IPerson
 	{
-
-	  private:
+	  protected:
 
 		Jobs _job;
 
-	  protected:
-
-		virtual void Action() override;
-
 	  public:
 
-		virtual void DoJob();
+		virtual void DoJob(IPerson visitor);
 
 		Jobs GetJob();
 
-		virtual void JobDone();
+		Employee(std::string name, int id, bool isEnabled);
 
-		Employee(int id, bool isEnabled);
 	};
 }

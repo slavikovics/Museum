@@ -2,20 +2,8 @@
 
 namespace MuseumNamespace
 {
-	void Employee::Action()
+	void Employee::DoJob(IPerson visitor)
 	{
-
-	}
-
-	void Employee::DoJob()
-	{
-		_job = NoJob;
-		Action();
-	}
-
-	void Employee::JobDone()
-	{
-		_job = NoJob;
 	}
 
 	Jobs Employee::GetJob()
@@ -23,8 +11,9 @@ namespace MuseumNamespace
 		return _job;
 	}
 
-	Employee::Employee(int id, bool isEnabled)
+	Employee::Employee(std::string name, int id, bool isEnabled)
 	{
+		_name = name;
 		_id = id;
 		_isEnabled = isEnabled;
 		_job = NoJob;

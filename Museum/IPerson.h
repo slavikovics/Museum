@@ -12,7 +12,5 @@ namespace MuseumNamespace
 		int _id;
 
 		bool _isEnabled;
-
-		virtual void Action() = 0;
 	};
 }

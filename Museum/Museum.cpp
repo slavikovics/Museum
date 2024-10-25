@@ -2,11 +2,10 @@
 
 namespace MuseumNamespace
 {
-	Museum::Museum(std::string name, std::string address, int numberOfEmployees)
+	Museum::Museum(std::string name, std::string address)
 	{
 		_name = name;
 		_address = address;
-		_numberOfEmployees = numberOfEmployees;
 		_statusController = MuseumStatusController();
 	}
 
