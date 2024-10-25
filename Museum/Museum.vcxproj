@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Employee.h" />
     <ClInclude Include="IPerson.h" />
     <ClInclude Include="Jobs.h" />
     <ClInclude Include="Museum.h" />

@@ -1,35 +1,34 @@
-#include <string>
-#include "MuseumStatuses.h"
-#include "Jobs.h"
+#include "Employee.h"
 
 namespace MuseumNamespace
 {
-	class Employee
+	void Employee::Action()
 	{
 
-	  private:
+	}
 
-		int _id;
+	void Employee::DoJob()
+	{
+		_job = NoJob;
+		Action();
+	}
 
-		bool _isEnabled;
+	void Employee::JobDone()
+	{
+		_job = NoJob;
+	}
 
-		Jobs _job;
+	Jobs Employee::GetJob()
+	{
+		return _job;
+	}
 
-	  public:
-
-		virtual void DoJob()
-		{
-			_isEnabled = true;
-			_job = NoJob;
-		}
-
-		Employee(int id, bool isEnabled)
-		{
-			_id = id;
-			_isEnabled = isEnabled;
-			_job = NoJob;
-		}
-	};
+	Employee::Employee(int id, bool isEnabled)
+	{
+		_id = id;
+		_isEnabled = isEnabled;
+		_job = NoJob;
+	}
 }
 
 
