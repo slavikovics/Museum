@@ -1,21 +1,33 @@
 #include <string>
+#include "MuseumNamespace.h"
 
-class Employee
+namespace MuseumNamespace
 {
-private:
-
-	int _id;
-
-	bool _isEnabled;
-
-	std::string _role;
-
-public:
-
-	Employee(int id, bool isEnabled, std::string role)
+	class Employee
 	{
-		_id = id;
-		_isEnabled = isEnabled;
-		_role = role;
-	}
-};
+
+	private:
+
+		int _id;
+
+		bool _isEnabled;
+
+		std::string _role;
+
+	public:
+
+		virtual void Action()
+		{
+
+		}
+
+		Employee(int id, bool isEnabled, std::string role)
+		{
+			_id = id;
+			_isEnabled = isEnabled;
+			_role = role;
+		}
+	};
+}
+
+

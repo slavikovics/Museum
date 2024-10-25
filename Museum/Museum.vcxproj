@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Museum.h" />
+    <ClInclude Include="MuseumNamespace.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />

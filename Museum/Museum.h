@@ -1,17 +1,21 @@
 #pragma once
-#include <string>
+#include "MuseumNamespace.h"
 
-class Museum
+namespace MuseumNamespace
 {
-private: 
+	class Museum
+	{
+	private:
 
-	std::string _name;
-			 
-	std::string _address;
-			 
-	int _numberOfEmployees;
+		std::string _name;
 
-public:	
+		std::string _address;
 
-	Museum(std::string name, std::string address, int numberOfEmployees);
-};
+		int _numberOfEmployees;
+
+	public:
+
+		Museum(std::string name, std::string address, int numberOfEmployees);
+	};
+}
+

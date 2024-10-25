@@ -1,8 +1,13 @@
-#include "./Museum.h"
+#include "MuseumNamespace.h"
+#include "Museum.h"
 
-Museum::Museum(std::string name, std::string address, int numberOfEmployees)
+namespace MuseumNamespace
 {
-	_name = name;
-	_address = address;
-	_numberOfEmployees = numberOfEmployees;
+	Museum::Museum(std::string name, std::string address, int numberOfEmployees)
+	{
+		_name = name;
+		_address = address;
+		_numberOfEmployees = numberOfEmployees;
+	}
 }
+
