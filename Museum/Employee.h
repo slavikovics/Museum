@@ -19,10 +19,12 @@ namespace MuseumNamespace
 
 		Jobs GetJob();
 
-		Employee(std::string name, int id, bool isEnabled);
+		Employee(std::string name, int id);
 
 		void Fire();
 
-		int GetId();
+		virtual int GetId() override;
+
+		virtual std::string GetName() override;
 	};
 }

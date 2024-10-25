@@ -1,6 +1,7 @@
 #pragma once
 #include "IPerson.h"
 #include <list>
+#include "Museum.h"
 
 namespace MuseumNamespace
 {
@@ -8,11 +9,11 @@ namespace MuseumNamespace
 	{
 	  private:
 
-		  bool hasTicket;
+		  bool _hasTicket;
 
 	  public:
 
-		  Visitor(std::string name, int id, bool isEnabled);
+		  Visitor(std::string name, int id);
 
 		  void ThrowLitter();
 
@@ -20,12 +21,13 @@ namespace MuseumNamespace
 
 		  void BuyTicket();
 
-		  void EnterMuseum();
+		  void EnterMuseum(Museum museum);
 
 		  void ExitMuseum();
 
-		  int GetId();
-	  
+		  virtual int GetId() override;
+
+		  virtual std::string GetName() override;
 	};
 }
 

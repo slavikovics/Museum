@@ -138,6 +138,7 @@
     <ClInclude Include="MuseumStatuses.h" />
     <ClInclude Include="MuseumStatusOpened.h" />
     <ClInclude Include="Visitor.h" />
+    <ClInclude Include="VisitorsController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="MuseumStatusController.cpp" />
     <ClCompile Include="MuseumStatusOpened.cpp" />
     <ClCompile Include="Visitor.cpp" />
+    <ClCompile Include="VisitorsController.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

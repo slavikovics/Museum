@@ -15,17 +15,20 @@ namespace MuseumNamespace
 
 		std::string _address;
 
-		MuseumStatusController _statusController;
+		double _balance;
 
-		std::list<Visitor> _visitors;
+		MuseumStatusController _statusController;
 
 		std::list<Employee> _employees;
 
-		bool CheckPersonInVisitors(IPerson person)
+		bool CheckInEmployees(Employee employee)
 		{
-			for (IPerson _person : _visitors)
+			for (Employee _employee : _employees)
 			{
-
+				if (_employee.GetId() == employee.GetId())
+				{
+					return false;
+				}
 			}
 		}
 
@@ -33,48 +36,33 @@ namespace MuseumNamespace
 
 		Museum(std::string name, std::string address);
 
-		void Open();
-
-		void Close();
-
-		std::list<Visitor> GetVisitors()
+		void Open()
 		{
-			return _visitors;
+			_statusController.ChangeStatus(MuseumStatuses::Opened);
 		}
 
-		void AddVisitor(Visitor visitor)
+		void Close()
 		{
-			_visitors.push_back(visitor);
+			if (GetVisitorsCount() != 0) return;
+			if (GetEmployeesCount() != 0) return;
+			_statusController.ChangeStatus(MuseumStatuses::Closed);
 		}
 
-		void RemoveVisitor(Visitor visitor)
+		int GetEmployeesCount()
 		{
-			int i = 0; 
-
-			for (Visitor _visitor : _visitors)
-			{
-				if (_visitor.GetId() == visitor.GetId())
-				{
-					_visitor.ExitMuseum();
-					_visitors.remove(_visitor);
-					break;
-				}
-				i++;
-			}
+			return _employees.size();
 		}
 
-		int GetVisitorsCount()
+		void AddEmployee(Employee& employee)
 		{
-			return _visitors.size();
-		}
-
-		void AddEmployee(Employee employee)
-		{
+			if (_statusController.GetCurrentStatus() != MuseumStatuses::Opened) return;
+			if (!CheckInEmployees(employee))
 			_employees.push_back(employee);
 		}
 
-		void RemoveEmployee(Employee employee)
+		void RemoveEmployee(Employee& employee)
 		{
+			if (_statusController.GetCurrentStatus() != MuseumStatuses::Opened) return;
 			int i = 0;
 
 			for (Employee _employee : _employees)
@@ -88,14 +76,6 @@ namespace MuseumNamespace
 				i++;
 			}
 		}
-
-		bool CheckPerson(IPerson)
-		{
-
-		}
-
-
-
 	};
 }
 

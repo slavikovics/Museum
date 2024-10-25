@@ -11,11 +11,10 @@ namespace MuseumNamespace
 		return _job;
 	}
 
-	Employee::Employee(std::string name, int id, bool isEnabled)
+	Employee::Employee(std::string name, int id)
 	{
 		_name = name;
 		_id = id;
-		_isEnabled = isEnabled;
 		_job = NoJob;
 	}
 }

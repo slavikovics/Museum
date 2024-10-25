@@ -5,13 +5,16 @@ namespace MuseumNamespace
 {
 	class IPerson
 	{
-	  public:
+	  protected:
 
 		std::string _name;
 
 		int _id;
 
-		bool _isEnabled;
+	  public:
 
+		virtual std::string GetName() = 0;
+
+		virtual int GetId() = 0;
 	};
 }
