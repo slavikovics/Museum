@@ -16,6 +16,8 @@ namespace MuseumNamespace
 	  public:
 
 		VisitorsController(MuseumStatusController& statusController);
+
+		VisitorsController();
  
 		std::list<Visitor> GetVisitors();
 

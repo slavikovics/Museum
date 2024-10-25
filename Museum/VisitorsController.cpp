@@ -7,6 +7,11 @@ namespace MuseumNamespace
 		_statusController = statusController;
 	}
 
+	VisitorsController::VisitorsController()
+	{
+		
+	}
+
 	void VisitorsController::AddVisitor(Visitor& visitor)
 	{
 		if (_statusController.GetCurrentStatus() == MuseumStatuses::Opened)

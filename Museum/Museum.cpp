@@ -7,6 +7,7 @@ namespace MuseumNamespace
 		_name = name;
 		_address = address;
 		_statusController = MuseumStatusController();
+		_visitorsController = VisitorsController(_statusController);
 	}
 
 	void Museum::Open()

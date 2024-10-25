@@ -1,5 +1,6 @@
 #pragma once
 #include "MuseumStatusController.h"
+#include "VisitorsController.h"
 #include <list>
 #include "Visitor.h"
 #include "Employee.h"
@@ -18,6 +19,8 @@ namespace MuseumNamespace
 		double _balance;
 
 		MuseumStatusController _statusController;
+
+		VisitorsController _visitorsController;
 
 		std::list<Employee> _employees;
 
@@ -43,8 +46,8 @@ namespace MuseumNamespace
 
 		void Close()
 		{
-			if (GetVisitorsCount() != 0) return;
-			if (GetEmployeesCount() != 0) return;
+			if (_visitorsController.GetVisitorsCount() != 0) return;
+			if (_visitorsController.GetEmployeesCount() != 0) return;
 			_statusController.ChangeStatus(MuseumStatuses::Closed);
 		}
 
