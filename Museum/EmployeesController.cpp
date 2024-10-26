@@ -44,7 +44,6 @@ namespace MuseumNamespace
 		{
 			if (_employee.GetId() == employee.GetId())
 			{
-				_employee.Fire();
 				_employees.remove(_employee);
 				break;
 			}

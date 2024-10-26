@@ -2,6 +2,9 @@
 #define VISITOR_H
 
 #include "IPerson.h"
+#include "EmployeesController.h"
+#include "VisitorsController.h"
+
 #include <list>
 #include "Museum.h"
 
@@ -25,21 +28,21 @@ namespace MuseumNamespace
 
 		  Visitor(const Visitor& other);
 
-		  void ThrowLitter();
+		  //void ThrowLitter();
 
-		  void BreakExhibit();
+		  //void BreakExhibit();
 
-		  void SeeExhibit();
+		  //void SeeExhibit();
 
-		  void BuyTicket();
+		  //void BuyTicket();
 
-		  void BuySouvenir();
+		  //void BuySouvenir();
 
-		  void EnterMuseum();
+		  //void EnterMuseum();
 
-		  void ExitMuseum();
+		  //void ExitMuseum();
 
-		  std::string AskGuide();
+		  //std::string AskGuide();
 
 		  virtual int GetId() override;
 
