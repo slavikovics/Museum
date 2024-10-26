@@ -1,4 +1,6 @@
-#pragma once
+#ifndef VISITOR_H
+#define VISITOR_H
+
 #include "IPerson.h"
 #include <list>
 #include "Museum.h"
@@ -11,19 +13,33 @@ namespace MuseumNamespace
 
 		  bool _hasTicket;
 
+		  EmployeesController _employeesController;
+
+		  VisitorsController _visitorsController;
+
 	  public:
 
-		  Visitor(std::string name, int id);
+		  Visitor(std::string name, int id, EmployeesController& employeesController, VisitorsController& visitorsController);
+
+		  Visitor();
+
+		  Visitor(const Visitor& other);
 
 		  void ThrowLitter();
 
 		  void BreakExhibit();
 
+		  void SeeExhibit();
+
 		  void BuyTicket();
 
-		  void EnterMuseum(Museum museum);
+		  void BuySouvenir();
+
+		  void EnterMuseum();
 
 		  void ExitMuseum();
+
+		  std::string AskGuide();
 
 		  virtual int GetId() override;
 
@@ -31,4 +47,4 @@ namespace MuseumNamespace
 	};
 }
 
-
+#endif

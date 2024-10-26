@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MUSEUM_STATUS_H
+#define MUSEUM_STATUS_H
+
 #include <string>
 
 namespace MuseumNamespace
@@ -21,4 +23,4 @@ namespace MuseumNamespace
 	};
 }
 
-
+#endif

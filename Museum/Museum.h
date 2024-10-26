@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MUSEUM_H
+#define MUSEUM_H
+
 #include "MuseumStatusController.h"
 #include "VisitorsController.h"
 #include "EmployeesController.h"
@@ -35,3 +37,4 @@ namespace MuseumNamespace
 	};
 }
 
+#endif

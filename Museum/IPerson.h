@@ -1,4 +1,6 @@
-#pragma once
+#ifndef IPERSON_H
+#define IPERSON_H
+
 #include <string>
 
 namespace MuseumNamespace
@@ -18,3 +20,5 @@ namespace MuseumNamespace
 		virtual int GetId() = 0;
 	};
 }
+
+#endif

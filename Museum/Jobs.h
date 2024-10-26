@@ -1,4 +1,6 @@
-#pragma once
+#ifndef JOBS_H
+#define JOBS_H
+
 #include "./MuseumStatuses.h"
 
 namespace MuseumNamespace
@@ -12,3 +14,5 @@ namespace MuseumNamespace
 		Cashier
 	};
 }
+
+#endif

@@ -1,8 +1,10 @@
-#pragma once
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
+
 #include <string>
 #include "MuseumStatuses.h"
 #include "Jobs.h"
-#include "IPerson.h"
+#include "Visitor.h"
 #include <list>
 
 namespace MuseumNamespace
@@ -15,16 +17,16 @@ namespace MuseumNamespace
 
 	  public:
 
-		virtual void DoJob(IPerson visitor);
+		virtual void IteractionWithVisitor(Visitor& visitor, VisitorsController& visitorsController);
 
 		Jobs GetJob();
 
 		Employee(std::string name, int id);
-
-		void Fire();
 
 		virtual int GetId() override;
 
 		virtual std::string GetName() override;
 	};
 }
+
+#endif

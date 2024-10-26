@@ -54,6 +54,9 @@
     <ClInclude Include="EmployeesController.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Guide.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Museum.cpp">
@@ -87,6 +90,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="EmployeesController.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Guide.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

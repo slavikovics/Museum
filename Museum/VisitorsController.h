@@ -1,4 +1,6 @@
-#pragma once
+#ifndef VISITORS_CONTROLLER_H
+#define VISITORS_CONTROLLER_H
+
 #include "Visitor.h"
 
 namespace MuseumNamespace
@@ -29,5 +31,5 @@ namespace MuseumNamespace
 	};
 }
 
-
+#endif
 

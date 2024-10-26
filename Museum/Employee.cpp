@@ -2,8 +2,9 @@
 
 namespace MuseumNamespace
 {
-	void Employee::DoJob(IPerson visitor)
+	void Employee::IteractionWithVisitor(Visitor& visitor, VisitorsController& visitorsController)
 	{
+
 	}
 
 	Jobs Employee::GetJob()
@@ -16,6 +17,16 @@ namespace MuseumNamespace
 		_name = name;
 		_id = id;
 		_job = NoJob;
+	}
+
+	int Employee::GetId()
+	{
+		return _id;
+	}
+
+	std::string Employee::GetName()
+	{
+		return _name;
 	}
 }
 

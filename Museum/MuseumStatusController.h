@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MUSEUM_STATUS_CONTROLLER_H
+#define MUSEUM_STATUS_CONTROLLER_H
+
 #include "./MuseumStatuses.h"
 
 namespace MuseumNamespace
@@ -21,3 +23,4 @@ namespace MuseumNamespace
 	};
 }
 
+#endif

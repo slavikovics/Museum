@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MUSEUM_STATUS_CLOSED_H
+#define MUSEUM_STATUS_CLOSED_H
+
 #include "./MuseumStatus.h"
 
 namespace MuseumNamespace
@@ -8,3 +10,5 @@ namespace MuseumNamespace
 	  public: MuseumStatusClosed();
 	};
 }
+
+#endif

@@ -2,13 +2,12 @@
 
 namespace MuseumNamespace
 {
-	void Guard::DoJob(IPerson visitor)
+	void Guard::IteractionWithVisitor(Visitor& visitor, VisitorsController& visitorsController)
 	{
-		_job = Jobs::Guard;
-		
+		visitorsController.RemoveVisitor(visitor);
 	}
 
-	Guard::Guard(std::string name, int id, bool isEnabled) : Employee(name, id, isEnabled)
+	Guard::Guard(std::string name, int id) : Employee(name, id)
 	{
 
 	}

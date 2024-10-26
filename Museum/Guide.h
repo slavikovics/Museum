@@ -1,18 +1,17 @@
-#ifndef GUARD_H
-#define GUARD_H
+#ifndef GUIDE_H
+#define GUIDE_H
 
 #include "Employee.h"
 
 namespace MuseumNamespace
 {
-	class Guard : public Employee
+	class Guide : public Employee
 	{
 	  public:
 
 		virtual void IteractionWithVisitor(Visitor& visitor, VisitorsController& visitorsController) override;
 
-		Guard(std::string name, int id);
-
+		Guide(std::string name, int id);
 	};
 }
 

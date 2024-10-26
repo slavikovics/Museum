@@ -1,4 +1,6 @@
-#pragma once
+#ifndef EMPLOYEE_CONTROLLER_H
+#define EMPLOYEE_CONTROLLER_H
+
 #include "Employee.h"
 #include "MuseumStatusController.h"
 
@@ -29,5 +31,5 @@ namespace MuseumNamespace
 	};
 }
 
-
+#endif 
 
